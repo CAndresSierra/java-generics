@@ -3,8 +3,8 @@ package com.devtalles.proyect.datastore;
 import java.util.*;
 
 public class DataStore<T, K> {
-    private List<T> usersNames = new LinkedList<>();
-    private Map<K, T> users = new HashMap<>();
+    private final List<T> usersNames = new LinkedList<>();
+    private final Map<K, T> users = new HashMap<>();
 
     public void add(K key, T item)throws NoSuchElementException {
         if(!users.containsKey(key)){
